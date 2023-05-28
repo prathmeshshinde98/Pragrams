@@ -1,0 +1,17 @@
+id,ind,fname,lname,apartment,street,city,country,phone
+001,FN,John
+001,LN,Wick
+001,AD,22,Continental Hotel,New York,USA
+001,PH,9124123421
+002,FN,Sherlock
+002,LN,Holmes
+002,AD,22,Backer Street,London,UK
+002,PH,1244512312
+003,FN,Star
+003,LN,Lord
+003,AD,123,Nowhere,Skull Galaxy,Space
+003,PH,9999999999
+004,FN,Clark
+004,LN,Kent
+004,AD,54,Washington post,Los Angeles,USA
+004,PH,1231231231
