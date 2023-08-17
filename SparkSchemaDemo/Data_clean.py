@@ -5,7 +5,7 @@ if __name__ == "__main__":
     spark = SparkSession.builder.appName("Data Clean").master("local[2]").getOrCreate()
 
     df = spark.read.format("csv").option("header", "true").option("multiline", "true").load("Data/Data_clean.csv")
-    # df.show()
+    #df.show()
 
     df1 = df.select(col("id").alias("id"),
                     when(df.ind == lit("FN"), df.fname).otherwise("null").alias("fname"),
