@@ -7,7 +7,7 @@ if __name__ == "__main__":
     file2 = spark.read.format("CSV").option('header',True).load("Data/Movies_ratings_CGPT.csv")
     df2 = file2.withColumn("rating", col("rating").cast("integer"))
     df3 = file2.groupby('movieId').sum('rating')
-    df3.show()
+    df4.show()
     file1.show()
     file2.show()
     spark.stop()
