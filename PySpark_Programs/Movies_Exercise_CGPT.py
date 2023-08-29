@@ -8,7 +8,7 @@ if __name__ == "__main__":
     df2 = file2.withColumn("rating", col("rating").cast("double"))
     df3 = df2.groupby('movieId').avg('rating')
     # df4 = df2.join(df3.select("userId","movieId","timestamp"),on = "movieId",how ="inner")
-    # df2.show()
+    df2.show()
     df3.show()
     # df4.show()
     spark.stop()
