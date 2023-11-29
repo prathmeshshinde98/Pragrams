@@ -9,5 +9,5 @@ if __name__ == "__main__":
     df3 = df2.groupby('movieId').avg('rating')
     # df4 = df2.join(df3.select("userId","movieId","timestamp"),on = "movieId",how ="inner")
     # df2.show()
-    df4.show()
+    df3.show()
     spark.stop()

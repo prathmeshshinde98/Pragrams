@@ -19,7 +19,7 @@ if __name__ == "__main__":
                                 min(df1.lname).alias("lname"),
                                 min(df1.address).alias("address"),
                                 min(df1.phone).alias("phone"))
-
+    
     # df2.show()
 
     df3 = df2.withColumn("apartment", split(df2.address, ',').getItem(0)) \
