@@ -1,5 +1,6 @@
 from pyspark.sql import *
 from pyspark.sql.functions import desc
+from pyspark.sql.types import StructType,StructField,IntegerType,StringType,DateType
 
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("SQL Tables").master("local[2]").getOrCreate()
