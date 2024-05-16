@@ -1,3 +1,4 @@
+import pyspark
 from pyspark.sql import *
 from pyspark.sql.functions import when, col, lit, concat_ws, min, split
 
@@ -13,7 +14,7 @@ if __name__ == "__main__":
                     when(df.ind == lit("AD"), concat_ws(", ",df.fname,df.lname,df.apartment,df.street)).otherwise("null").alias("address"),
                     when(df.ind == lit("PH"), df.fname).otherwise("null").alias("phone")
                     )
-    # df1.show()
+    #df1.show()
 
     df2 = df1.groupby("id").agg(min(df1.fname).alias("fname"),
                                 min(df1.lname).alias("lname"),
@@ -29,5 +30,7 @@ if __name__ == "__main__":
 
     df3 = df3.select("id","fname","lname","apartment","street","city","country","phone")
     df3.show()
+
+    spark.stop()
     # df3.write.option("header",True).csv("Data/Data_cleaned")
-    df3.toPandas().to_csv("Data/Data_cleaned.csv")
+    # df3.toPandas().to_csv("Data/Data_cleaned.csv")
