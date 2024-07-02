@@ -3,7 +3,7 @@ import os
 import sys
 import matplotlib.pyplot as plt
 import numpy as np
-
+from collections import Counter
 
 def graph_function():
     x_axis_points = np.array([1, 10])
@@ -60,4 +60,10 @@ if __name__ == '__main__':
     # types_in_python()
     # print(two_sum(*two_sum_input()))
     # graph_function()
-    print(1)
+    test_var = 3.123123
+    test_var1 = round(test_var, 5)
+    #print(f'This is the string {test_var:.2f} and {test_var1}')
+    red1 = 'This is the masterpiece of code that you are writing Champ'
+    my_counter = Counter(red1)
+    print(my_counter)
+    print(my_counter.items())
