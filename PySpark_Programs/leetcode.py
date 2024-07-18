@@ -4,6 +4,8 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 from collections import Counter
+import datetime
+
 
 def graph_function():
     x_axis_points = np.array([1, 10])
@@ -67,3 +69,4 @@ if __name__ == '__main__':
     my_counter = Counter(red1)
     print(my_counter)
     print(my_counter.items())
+
