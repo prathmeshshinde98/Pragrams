@@ -3,12 +3,14 @@ from selenium.webdriver.chrome.service import Service
 import time
 from bs4 import BeautifulSoup
 import smtplib
-
+import os
 
 def sendmail(prices):
     # Clean the prices since ASCII won't recognize Rupee sign (₹), which has a Unicode code point of \u20b9
     clean_price = [s[2:] for s in prices]
     print(clean_price)
+    username = os.environ.get('OUTLOOK_USER')
+    password = os.environ.get('OUTLOOK_PASSWORD')
     # Establish the connection with outlook server using SMTP module
     with smtplib.SMTP('smtp.outlook.com', 587) as smtp:
         # # Unencrypted ping to server
@@ -18,7 +20,7 @@ def sendmail(prices):
         # Encrypted ping to server
         smtp.ehlo()
         # Log in details should be put in config file
-        smtp.login('possumtree452@hotmail.com', 'rw88.v3;&4A')
+        smtp.login(username, password)
 
         # Mail Subject and Body
         subject = 'SkyScanner price check '
