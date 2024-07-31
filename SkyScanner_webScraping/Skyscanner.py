@@ -28,7 +28,7 @@ def sendmail(prices):
         msg = f'Subject: {subject}\n\n {body}'
 
         # Send mail
-        smtp.sendmail('possumtree452@hotmail.com', ['prathmeshshinde1998@gmail.com', 'preetampalkar7998@gmail.com'], msg)
+        smtp.sendmail('possumtree452@hotmail.com', 'prathmeshshinde1998@gmail.com', msg)
 
 
 if __name__ == "__main__":
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # driver = webdriver.Chrome(service=service, options=chrome_options)
     driver = webdriver.Chrome(service=service)
     # Go to the page that requires JavaScript
-    url = 'https://www.skyscanner.co.in/transport/flights/pnq/blr/240818/config/15466-2408181940--32671-0-10002-2408182110?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false'
+    url = 'https://www.skyscanner.co.in/transport/flights/pnq/blr/240818/config/15466-2408181730--30643-0-10002-2408181910?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false'
     driver.get(url)
 
     # Allow time for JavaScript to execute
