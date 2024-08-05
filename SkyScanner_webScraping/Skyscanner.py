@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # driver = webdriver.Chrome(service=service, options=chrome_options)
     driver = webdriver.Chrome(service=service)
     # Go to the page that requires JavaScript
-    url = 'https://www.skyscanner.co.in/transport/flights/pnq/blr/240818/config/15466-2408181730--30643-0-10002-2408181910?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false'
+    url = 'https://www.skyscanner.co.in/transport/flights/blr/pnq/240818/config/10002-2408180050--32213-0-15466-2408180215?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false'
     driver.get(url)
 
     # Allow time for JavaScript to execute
